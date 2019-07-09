@@ -11,14 +11,14 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class Application {
 	
-	final int MIN_SIZE = 99;
+	final int MIN_SIZE = 50;
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
 
     @Bean
-    public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
+    public CommandLineRunner commandLineRunnerBeanWithVeryLargeNameWithLengthMaxThan50(ApplicationContext ctx) {
         return args -> {
 
             System.out.println("Let's inspect the beans provided by Spring Boot:");
